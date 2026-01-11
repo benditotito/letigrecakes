@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Le Tigré Cakes | El Prat de Llobregat</title>
+  <meta name="description" content="Tartas y postres artesanos en El Prat de Llobregat. Encargos por WhatsApp.">
+  <style>
+    :root{
+      --bg:#fff7ee; --card:#ffffff; --text:#1b1b1b; --muted:#6b6b6b;
+      --accent:#c08a3e; --border:rgba(0,0,0,.08);
+      --radius:18px;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial; background:var(--bg); color:var(--text)}
+    a{color:inherit;text-decoration:none}
+    .wrap{max-width:1080px;margin:0 auto;padding:18px}
+    header{
+      position:sticky; top:0; z-index:50;
+      background:rgba(255,247,238,.92); backdrop-filter: blur(10px);
+      border-bottom:1px solid var(--border);
+    }
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.3px}
+    .brand-badge{width:36px;height:36px;border-radius:12px;background:var(--text);display:grid;place-items:center;color:#fff;font-weight:900}
+    .menu{display:flex;gap:14px;flex-wrap:wrap;justify-content:flex-end}
+    .menu a{font-size:14px;color:var(--muted);padding:10px 8px;border-radius:12px}
+    .menu a:hover{background:rgba(0,0,0,.04);color:var(--text)}
+    .hero{padding:22px 0 8px}
+    .hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:18px;align-items:stretch}
+    @media (max-width:900px){.hero-grid{grid-template-columns:1fr}}
+    .card{
+      background:var(--card); border:1px solid var(--border);
+      border-radius:var(--radius); padding:18px; box-shadow:0 8px 24px rgba(0,0,0,.05);
+    }
+    h1{margin:0 0 10px;font-size:38px;line-height:1.05}
+    @media (max-width:600px){h1{font-size:32px}}
+    p{margin:0 0 14px;color:var(--muted);line-height:1.5}
+    .btns{display:flex;gap:10px;flex-wrap:wrap}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;gap:8px;
+      padding:12px 14px;border-radius:14px;border:1px solid var(--border);
+      background:#fff; font-weight:700;
+    }
+    .btn.primary{background:var(--text);color:#fff;border-color:transparent}
+    .btn.accent{background:var(--accent);color:#fff;border-color:transparent}
+    .pill{display:inline-flex;gap:8px;align-items:center;background:rgba(192,138,62,.12);
+      color:var(--text);padding:8px 10px;border-radius:999px;font-weight:700;font-size:13px}
+    .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    @media (max-width:900px){.grid3{grid-template-columns:1fr}}
+    .section{padding:10px 0}
+    .section h2{margin:0 0 10px;font-size:22px}
+    .products{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    @media (max-width:900px){.products{grid-template-columns:repeat(2,1fr)}}
+    @media (max-width:520px){.products{grid-template-columns:1fr}}
+    .prod{overflow:hidden}
+    .img{
+      width:100%;aspect-ratio:4/3;background:rgba(0,0,0,.06);
+      border-radius:14px; display:grid;place-items:center;color:var(--muted);font-weight:700
+    }
+    .prod h3{margin:12px 0 6px;font-size:16px}
+    .meta{display:flex;align-items:center;justify-content:space-between;gap:10px}
+    .price{font-weight:900}
+    .small{font-size:13px;color:var(--muted)}
+    .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    @media (max-width:900px){.steps{grid-template-columns:1fr}}
+    .stepnum{width:34px;height:34px;border-radius:12px;background:rgba(0,0,0,.06);display:grid;place-items:center;font-weight:900}
+    form{display:grid;gap:10px}
+    input,select,textarea{
+      width:100%;padding:12px 12px;border-radius:14px;border:1px solid var(--border);
+      background:#fff;font-size:15px
+    }
+    textarea{min-height:90px;resize:vertical}
+    footer{padding:18px 0;color:var(--muted);font-size:13px}
+    .sticky-cta{
+      position:fixed;left:0;right:0;bottom:0;z-index:60;
+      background:rgba(255,255,255,.92);backdrop-filter: blur(10px);
+      border-top:1px solid var(--border);
+    }
+    .sticky-inner{max-width:1080px;margin:0 auto;padding:10px 18px;display:flex;gap:10px}
+    .sticky-inner a{flex:1}
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <div class="brand">
+      <div class="brand-badge">LT</div>
+      <div>Le Tigré Cakes</div>
+    </div>
+    <nav class="menu">
+      <a href="#carta">Carta</a>
+      <a href="#encargos">Tartas por encargo</a>
+      <a href="#pedir">Encargar</a>
+      <a href="#ubicacion">Ubicación</a>
+      <a href="#opiniones">Opiniones</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="hero">
+    <div class="hero-grid">
+      <div class="card">
+        <span class="pill">📍 El Prat de Llobregat · Encargos por WhatsApp</span>
+        <h1>Tartas y postres artesanos, sin complicaciones.</h1>
+        <p>Encarga para cumpleaños, eventos o tu capricho del día. Respuesta rápida y recogida cómoda en El Prat.</p>
+        <div class="btns">
+          <a class="btn primary" id="ctaWhats" href="#" target="_blank" rel="noreferrer">💬 Pedir por WhatsApp</a>
+          <a class="btn" href="#carta">🍰 Ver carta</a>
+          <a class="btn" href="tel:+34XXXXXXXXX">📞 Llamar</a>
+        </div>
+        <p class="small">Plazo recomendado: 48–72h para tartas personalizadas.</p>
+      </div>
+
+      <div class="card">
+        <h2 style="margin-top:0">Más vendidos</h2>
+        <div class="grid3" style="grid-template-columns:1fr;gap:10px">
+          <div class="card" style="padding:12px;border-radius:16px;box-shadow:none">
+            <div style="display:flex;justify-content:space-between;gap:10px;align-items:center">
+              <strong>Red Velvet</strong><span class="small">desde 35€</span>
+            </div>
+            <div class="small">Esponjosa, cremosa y perfecta para cumpleaños.</div>
+          </div>
+          <div class="card" style="padding:12px;border-radius:16px;box-shadow:none">
+            <div style="display:flex;justify-content:space-between;gap:10px;align-items:center">
+              <strong>Cheesecake</strong><span class="small">desde 28€</span>
+            </div>
+            <div class="small">Clásica o con toppings de temporada.</div>
+          </div>
+          <div class="card" style="padding:12px;border-radius:16px;box-shadow:none">
+            <div style="display:flex;justify-content:space-between;gap:10px;align-items:center">
+              <strong>Pack cupcakes</strong><span class="small">desde 18€</span>
+            </div>
+            <div class="small">Ideal para oficinas y eventos.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="carta" class="section">
+    <div class="card">
+      <h2>Carta</h2>
+      <p>Precios orientativos. Confirma disponibilidad y detalles por WhatsApp.</p>
+
+      <div class="products">
+        <article class="card prod">
+          <div class="img">Foto 1</div>
+          <h3>Tarta Red Velvet</h3>
+          <div class="meta">
+            <span class="small">Clásica y cremosa</span>
+            <span class="price">desde 35€</span>
+          </div>
+          <div style="margin-top:10px">
+            <a class="btn accent" href="#" data-producto="Tarta Red Velvet">Pedir</a>
+          </div>
+        </article>
+
+        <article class="card prod">
+          <div class="img">Foto 2</div>
+          <h3>Cheesecake</h3>
+          <div class="meta">
+            <span class="small">Con topping a elegir</span>
+            <span class="price">desde 28€</span>
+          </div>
+          <div style="margin-top:10px">
+            <a class="btn accent" href="#" data-producto="Cheesecake">Pedir</a>
+          </div>
+        </article>
+
+        <article class="card prod">
+          <div class="img">Foto 3</div>
+          <h3>Cupcakes (pack)</h3>
+          <div class="meta">
+            <span class="small">6 / 12 unidades</span>
+            <span class="price">desde 18€</span>
+          </div>
+          <div style="margin-top:10px">
+            <a class="btn accent" href="#" data-producto="Cupcakes (pack)">Pedir</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="encargos" class="section">
+    <div class="card">
+      <h2>Tartas por encargo</h2>
+      <p>Personaliza sabor, tamaño y decoración. Te confirmamos precio final según diseño.</p>
+
+      <div class="steps">
+        <div class="card" style="box-shadow:none">
+          <div style="display:flex;gap:10px;align-items:center;margin-bottom:8px">
+            <div class="stepnum">1</div><strong>Elige</strong>
+          </div>
+          <div class="small">Sabor + tamaño (raciones) + estilo (simple / temática).</div>
+        </div>
+        <div class="card" style="box-shadow:none">
+          <div style="display:flex;gap:10px;align-items:center;margin-bottom:8px">
+            <div class="stepnum">2</div><strong>Confirmamos</strong>
+          </div>
+          <div class="small">Te decimos disponibilidad, precio y hora de recogida.</div>
+        </div>
+        <div class="card" style="box-shadow:none">
+          <div style="display:flex;gap:10px;align-items:center;margin-bottom:8px">
+            <div class="stepnum">3</div><strong>Recoges</strong>
+          </div>
+          <div class="small">En El Prat, sin líos. ¡Y a celebrar!</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="pedir" class="section">
+    <div class="card">
+      <h2>Encargar en 1 minuto</h2>
+      <p>Rellena lo básico y se abrirá WhatsApp con el mensaje listo.</p>
+
+      <form id="orderForm">
+        <input name="nombre" placeholder="Tu nombre" required />
+        <input name="fecha" type="date" required />
+        <select name="producto" required>
+          <option value="">¿Qué quieres pedir?</option>
+          <option>Tarta (personalizada)</option>
+          <option>Cheesecake</option>
+          <option>Cupcakes</option>
+          <option>Galletas</option>
+          <option>Otro</option>
+        </select>
+        <input name="personas" placeholder="¿Para cuántas personas? (opcional)" />
+        <input name="sabor" placeholder="Sabor (opcional)" />
+        <input name="alergias" placeholder="Alergias / intolerancias (opcional)" />
+        <textarea name="comentarios" placeholder="Detalles: decoración, dedicatoria, temática… (opcional)"></textarea>
+
+        <button class="btn primary" type="submit">💬 Enviar por WhatsApp</button>
+      </form>
+    </div>
+  </section>
+
+  <section id="ubicacion" class="section">
+    <div class="card">
+      <h2>Ubicación</h2>
+      <p><strong>Dirección:</strong> (pon aquí tu dirección exacta) · El Prat de Llobregat</p>
+      <p><strong>Horario:</strong> (ej: Lun–Sáb 10:00–14:00 / 17:00–20:00)</p>
+      <div class="btns">
+        <a class="btn" href="https://www.google.com/maps" target="_blank" rel="noreferrer">🧭 Cómo llegar</a>
+        <a class="btn" href="tel:+34XXXXXXXXX">📞 Llamar</a>
+        <a class="btn primary" href="#" id="ctaWhats2" target="_blank" rel="noreferrer">💬 WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="opiniones" class="section">
+    <div class="card">
+      <h2>Opiniones</h2>
+      <p>Pega aquí reseñas de Google (o capturas) para dar confianza.</p>
+      <div class="grid3">
+        <div class="card" style="box-shadow:none">
+          <strong>★★★★★</strong>
+          <div class="small">“Increíble sabor y presentación. Repetimos seguro.”</div>
+        </div>
+        <div class="card" style="box-shadow:none">
+          <strong>★★★★★</strong>
+          <div class="small">“Encargo fácil por WhatsApp y puntualidad perfecta.”</div>
+        </div>
+        <div class="card" style="box-shadow:none">
+          <strong>★★★★★</strong>
+          <div class="small">“La mejor tarta del Prat, sin duda.”</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © <span id="year"></span> Le Tigré Cakes · Hecho con cariño en El Prat.
+  </footer>
+
+</main>
+
+<div class="sticky-cta">
+  <div class="sticky-inner">
+    <a class="btn primary" href="#" id="stickyWhats" target="_blank" rel="noreferrer">💬 Pedir por WhatsApp</a>
+    <a class="btn" href="tel:+34XXXXXXXXX">📞 Llamar</a>
+  </div>
+</div>
+
+<script>
+  // CONFIG: cambia esto por tu número (con prefijo país, sin +)
+  const phone = "34XXXXXXXXX"; // ejemplo: 34600111222
+
+  function waLink(text){
+    return `https://wa.me/${phone}?text=${encodeURIComponent(text)}`;
+  }
+
+  const defaultMsg = "Hola 😊 Quiero hacer un pedido en Le Tigré Cakes. ¿Me dices disponibilidad?";
+  document.getElementById("ctaWhats").href = waLink(defaultMsg);
+  document.getElementById("ctaWhats2").href = waLink(defaultMsg);
+  document.getElementById("stickyWhats").href = waLink(defaultMsg);
+
+  document.querySelectorAll("[data-producto]").forEach(btn=>{
+    btn.href = waLink(`Hola 😊 Quiero pedir: ${btn.dataset.producto}. ¿Disponibilidad y precio?`);
+    btn.target = "_blank";
+    btn.rel = "noreferrer";
+  });
+
+  document.getElementById("orderForm").addEventListener("submit", (e)=>{
+    e.preventDefault();
+    const data = new FormData(e.target);
+    const msg =
+`Hola 😊 Soy ${data.get("nombre")}.
+Quiero encargar: ${data.get("producto")}.
+Fecha: ${data.get("fecha")}.
+Personas: ${data.get("personas") || "-"}.
+Sabor: ${data.get("sabor") || "-"}.
+Alergias: ${data.get("alergias") || "-"}.
+Detalles: ${data.get("comentarios") || "-"}.`;
+    window.open(waLink(msg), "_blank");
+  });
+
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
